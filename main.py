@@ -37,7 +37,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36',
 }
 def ssfndownload():
-    url = r'https://ssfn.yinbuliao.cn/ssfn/ssfn'
+    url = r'https://ssfnbox.com/download/'
     send_url = url + ssfn
     try:
         os.path.exists(patch[0] + '/' + 'ssfn' + ssfn)
@@ -55,7 +55,7 @@ def ssfndownload():
 
 def autoloign():
     steam = patch[0] + '/' + r"steam.exe"
-    subprocess.run(steam + ' -login ' + str(username) + ' ' + str(password))
+    subprocess.run(steam + ' -rememberpassword -windowed -bigpicture -login ' + str(username) + ' ' + str(password))
 
 if __name__ == '__main__':
     try:
